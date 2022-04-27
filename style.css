@@ -1,0 +1,265 @@
+:root{
+    --background: linear-gradient(to right, #3a7bd5, #3a6073);
+    --fontFamily: 'Noto Sans', sans-serif;
+}
+
+
+body{
+    background: var(--background);
+    font-family: var(--fontFamily);
+    box-sizing: border-box;
+}
+
+.skin{
+    position: absolute;
+    color: rgb(236, 236, 236);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.5%;
+    border-radius: 5px;
+    border: 2px solid rgba(246, 246, 246, 0.2);
+    background: transparent;
+    cursor: pointer;
+}
+
+.app{
+    position: absolute;
+    top: 15%;
+    left: 23%;
+    width: 50%;
+    min-height: 60%;
+    padding: 2%;
+    background: rgba( 229, 219, 219, 0.1 );
+    box-shadow: 0 0 3px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.stop{
+    position: absolute;
+    color: rgb(236, 236, 236);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid rgba(246, 246, 246, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.stop:hover, .buttonTask:hover, .reset:hover, .startButton:hover{
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.reset{
+    position: absolute;
+    right: 4%;
+    color: rgb(230, 230, 230);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1%;
+    background: rgba(184, 184, 184, 0.4);
+    border-radius: 5px;
+    border: 1px solid rgba(219, 219, 219, 0.2);
+    cursor: pointer;
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.value{
+    font-size: 8rem;
+    color: rgb(217, 217, 217);
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+/*form section*/
+
+.form{
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.minutes{
+    position: absolute;
+    top: 40vh;
+    max-width: 20%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .7);
+    text-align: center;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid rgba(246, 246, 246, 0.2);
+    background: transparent;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.break{
+    position: absolute;
+    top: 40vh;
+    right: 4%;
+    max-width: 20%;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, .7);
+    font-weight: 500;
+    text-align: center;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid rgba(246, 246, 246, 0.2);
+    background: transparent;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.inputTask{
+    width: 80%;
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1%;
+    border-radius: 5px;
+    border: 3px solid rgba(249, 253, 255, 0.4);
+    background: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.inputTask:hover, .minutes:hover, .break:hover{
+    transform: scale(1.05);
+}
+
+.inputTask::placeholder, .minutes::placeholder, .break::placeholder{
+    color: rgba(255, 255, 255, .4);
+}
+.inputTask:focus, .minutes:focus, .break:focus{
+    outline: none;
+    transform: scale(1.05);
+}
+
+.taskName{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .7);
+    text-align: center;
+    background: transparent;
+    position: absolute;
+    top: 1rem;
+}
+
+.buttonTask{
+    color: rgb(232, 232, 232);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid rgba(246, 246, 246, 0.2);
+    background: rgba(184, 184, 184, 0.3);
+    cursor: pointer;
+}
+
+/*task section*/
+
+.tasksContainer{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    transition: all .5 ease;
+}
+
+.task{
+    padding: 1%;
+    text-align: center;
+    width: 100%;
+    min-height: 7vh;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 rgba( 31, 38, 135, 0.2 );
+}
+
+.startButton{
+    color: rgb(213, 213, 213);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1% 2%;
+    border-radius: 5px;
+    border: 1px solid rgba(246, 246, 246, 0.2);
+    background: transparent;
+}
+
+.title{
+    color: rgb(190, 190, 190);
+    font-size: 1.3rem;
+    padding: 2%;
+}
+
+.completed{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.done{
+    color: rgb(216, 216, 216);
+    font-size: 1.1rem;
+    font-weight: 200;
+    padding: 0% 2%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 630px){
+
+    *{
+        font-size: 0.8rem;
+    }
+    .skin{
+        position: absolute;
+        top: 1%;	
+        font-size: 0.9rem;
+    }
+
+    .app{
+        position: relative;
+        width: 80%;
+        top: 8%;
+        left: 0%;
+        right: 0%;
+        margin:auto;
+        margin: 10% auto;
+    }
+
+    .value{
+        margin-top: 20%;
+        font-size: 5rem;
+    }
+
+    .minutes, .break{
+        min-width: 30%;
+    }
+}
