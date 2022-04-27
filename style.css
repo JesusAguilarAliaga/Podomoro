@@ -165,7 +165,7 @@ body{
     font-size: 1.1rem;
     font-weight: 600;
     text-align: center;
-    padding: 1%;
+    padding: 1% 5%;
     border-radius: 5px;
     border: 1px solid rgba(246, 246, 246, 0.2);
     background: rgba(184, 184, 184, 0.3);
@@ -233,21 +233,27 @@ body{
 
 
 
-@media screen and (max-width: 630px){
+@media screen and (max-width: 700px){
+
+    body{
+        box-sizing: border-box;
+    }
 
     *{
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
     .skin{
         position: absolute;
         top: 1%;	
-        font-size: 0.9rem;
+        font-size: 1rem;
+        padding: 2%;
     }
 
     .app{
         position: relative;
         width: 80%;
-        top: 8%;
+        min-height: 25rem;
+        top: 2vh;
         left: 0%;
         right: 0%;
         margin:auto;
@@ -260,6 +266,21 @@ body{
     }
 
     .minutes, .break{
-        min-width: 30%;
+        min-width: 40%;
+        padding: 1%;
+        top: 21rem;
+        border: 1px solid rgba(249, 253, 255, 0.3);
     }
+
+    .form{
+        min-height: 12rem;
+    }
+
+    .startButton{
+        padding: 3%;
+    }
+/* 
+    .tasksContainer{
+        margin-top: 7rem;
+    } */
 }
