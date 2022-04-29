@@ -55,7 +55,7 @@ const randomHexColor = () => {
 
 //inputs for minutes and breaks/////////////////////
 getMinutes.addEventListener("input", (e) => {
-    if(e.target.value > 0){
+    if(e.target.value > 0 && e.target.value < 60){
         setMinutes = e.target.value;
     }else{
         setMinutes = 1;
@@ -63,7 +63,7 @@ getMinutes.addEventListener("input", (e) => {
 })
 
 getBreakMinutes.addEventListener("input", (e) => {
-    if(e.target.value > 0){
+    if(e.target.value > 0 && e.target.value < 60){
         setBreakMinutes = e.target.value;
     }else{
         setBreakMinutes = 1;
@@ -95,6 +95,7 @@ const render = () => {
         <div class="task">
             <div class="completed">${task.done ? `<span class="done">Done</span>`:`<button class=startButton data-id="${task.id}">Start</button>`}</div>
             <div class="title">${task.title}</div>
+            <div class="infoTask">Min: ${setMinutes}|Break: ${setBreakMinutes}</div>
             </div>`;
         })
 

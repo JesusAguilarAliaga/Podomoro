@@ -14,7 +14,7 @@ body{
     position: absolute;
     color: rgb(236, 236, 236);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
     padding: 0.5%;
     border-radius: 5px;
@@ -97,7 +97,7 @@ body{
     top: 40vh;
     max-width: 20%;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 300;
     color: rgba(255, 255, 255, .7);
     text-align: center;
     padding: 1%;
@@ -115,7 +115,7 @@ body{
     max-width: 20%;
     font-size: 1rem;
     color: rgba(255, 255, 255, .7);
-    font-weight: 500;
+    font-weight: 300;
     text-align: center;
     padding: 1%;
     border-radius: 5px;
@@ -129,11 +129,11 @@ body{
     width: 80%;
     color: rgba(255, 255, 255, .7);
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 200;
     text-align: center;
     padding: 1%;
     border-radius: 5px;
-    border: 3px solid rgba(249, 253, 255, 0.4);
+    border: 2px solid rgba(249, 253, 255, 0.4);
     background: transparent;
     transition: all .3s ease-in-out;
 }
@@ -188,6 +188,7 @@ body{
 }
 
 .task{
+    position: relative;
     padding: 1%;
     text-align: center;
     width: 100%;
@@ -201,7 +202,7 @@ body{
 .startButton{
     color: rgb(213, 213, 213);
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     padding: 1% 2%;
     border-radius: 5px;
@@ -210,9 +211,9 @@ body{
 }
 
 .title{
-    color: rgb(190, 190, 190);
+    color: rgb(221, 221, 221);
     font-size: 1.3rem;
-    padding: 2%;
+    text-align: left;
 }
 
 .completed{
@@ -228,6 +229,23 @@ body{
     padding: 0% 2%;
 }
 
+.infoTask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(186, 186, 186);
+    font-weight: 200;
+    font-size: 0.8rem;
+
+}
+
+footer > p{
+    position: absolute;
+    bottom: 0;
+    color: rgb(177, 177, 177);
+    font-weight: 100;
+    font-size: 0.6rem;
+}
 
 
 
@@ -244,14 +262,15 @@ body{
     }
     .skin{
         position: absolute;
+        left: 35%;
         top: 1%;	
-        font-size: 1rem;
-        padding: 2%;
+        font-size: 0.9rem;
+        padding: 1%;
     }
 
     .app{
         position: relative;
-        width: 80%;
+        width: 85%;
         min-height: 25rem;
         top: 2vh;
         left: 0%;
@@ -267,17 +286,38 @@ body{
 
     .minutes, .break{
         min-width: 40%;
-        padding: 1%;
+        padding: 2% 1%;
         top: 21rem;
-        border: 1px solid rgba(249, 253, 255, 0.3);
+        border: 1px solid rgba(249, 253, 255, 0.4);
     }
 
     .form{
         min-height: 12rem;
+        gap: 1rem;
     }
 
     .startButton{
-        padding: 3%;
+        padding: 1% 2%;
+    }
+
+    .stop{
+        top: 1%;
+        left: 1%;
+        padding: 2%;
+    }
+
+    .reset{
+        top: 1%;
+        right: 1%;
+        padding: 2%;
+    }
+    
+    .inputTask{
+        width: 90%;
+        padding: 2% 0;
+    }
+    .buttonTask{
+        padding: 3% 10%;
     }
 /* 
     .tasksContainer{
